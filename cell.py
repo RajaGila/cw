@@ -77,7 +77,7 @@ def main(auth_token):
         post_submit_clicks_headers.update({
             'Content-Type': 'application/json',
         })
-        post_submit_clicks_data = '{"clicks_amount": 10}'
+        post_submit_clicks_data = '{"clicks_amount": 100000}'
 
         # Perform the preflight (OPTIONS) request
         options_response = requests.options(post_submit_clicks_url, headers=post_submit_clicks_headers)
@@ -110,7 +110,7 @@ def execute_all_accounts():
     auth_tokens = load_auth_tokens('token.txt')
     for auth_token in auth_tokens:
         main(auth_token)
-        print(f"{Fore.MAGENTA}Sleeping for 2 seconds before retrying next account...{Style.RESET_ALL}")
+        print(f"{Fore.MAGENTA}Sleeping for 10 seconds before retrying next account...{Style.RESET_ALL}")
         time.sleep(10) 
 if __name__ == "__main__":
     print(ascii_art)
