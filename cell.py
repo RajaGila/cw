@@ -1,6 +1,3 @@
-#  JOIN TELEGRAM : https://t.me/apsstudiotech
-#  JOIN DISCORD : https://discord.gg/N9caefVJ7F
-
 import requests
 import time
 from colorama import Fore, Style, init
@@ -13,16 +10,8 @@ post_submit_clicks_url = "https://cellcoin.org/cells/submit_clicks"
 post_upgrade_url = "https://cellcoin.org/cells/levels/upgrade"
 
 ascii_art = f"""
-{Fore.GREEN}
- █████╗ ██████╗ ███████╗    ███████╗████████╗██╗   ██╗██████╗ ██╗ ██████╗ 
-██╔══██╗██╔══██╗██╔════╝    ██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║██╔═══██╗
-███████║██████╔╝███████╗    ███████╗   ██║   ██║   ██║██║  ██║██║██║   ██║
-██╔══██║██╔═══╝ ╚════██║    ╚════██║   ██║   ██║   ██║██║  ██║██║██║   ██║
-██║  ██║██║     ███████║    ███████║   ██║   ╚██████╔╝██████╔╝██║╚██████╔╝
-╚═╝  ╚═╝╚═╝     ╚══════╝    ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ 
 {Style.RESET_ALL}
-{Fore.CYAN}JOIN TELEGRAM : https://t.me/apsstudiotech
-JOIN DISCORD  : https://discord.gg/N9caefVJ7F{Style.RESET_ALL}
+{Fore.CYAN}𝕽𝖆𝖏𝖆𝕲𝖎𝖑𝖆{Style.RESET_ALL}
 """
 
 def load_auth_tokens(file_path):
@@ -77,7 +66,7 @@ def main(auth_token):
         post_submit_clicks_headers.update({
             'Content-Type': 'application/json',
         })
-        post_submit_clicks_data = '{"clicks_amount": 100000}'
+        post_submit_clicks_data = '{"clicks_amount": 10000}'
 
         # Perform the preflight (OPTIONS) request
         options_response = requests.options(post_submit_clicks_url, headers=post_submit_clicks_headers)
@@ -110,12 +99,12 @@ def execute_all_accounts():
     auth_tokens = load_auth_tokens('token.txt')
     for auth_token in auth_tokens:
         main(auth_token)
-        print(f"{Fore.MAGENTA}Sleeping for 10 seconds before retrying next account...{Style.RESET_ALL}")
+        print(f"{Fore.MAGENTA}Sabar 10 detik kontol{Style.RESET_ALL}")
         time.sleep(10) 
 if __name__ == "__main__":
     print(ascii_art)
     while True:
         execute_all_accounts()
         print(ascii_art)
-        print(f"{Fore.MAGENTA}Restarting after all accounts are executed. Sleeping for 10 menit...{Style.RESET_ALL}")
+        print(f"{Fore.MAGENTA}Restarting after all accounts are executed. Molor heula 10 menit tot{Style.RESET_ALL}")
         time.sleep(600) 
