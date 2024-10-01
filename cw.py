@@ -106,5 +106,5 @@ if __name__ == "__main__":
     while True:
         execute_all_accounts()
         print(ascii_art)
-        print(f"{Fore.MAGENTA}Restarting after all accounts are executed. Molor heula 10 menit tot{Style.RESET_ALL}")
-        time.sleep(600) 
+        print(f"{Fore.MAGENTA}Restarting after all accounts are executed. Molor heula 5 menit tot{Style.RESET_ALL}")
+        time.sleep(300) 
